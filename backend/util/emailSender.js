@@ -11,10 +11,10 @@ class CustomEmailSender extends EmailValidator {
   constructor(key) {
     super();
     this.emailSender.setApiKey(key);
-    
+
   }
 
-   postMsg (body, emailTemplate){
+  postMsg(body, emailTemplate) {
     const msg = {
       "to": body.to,
       "from": "glie@ya.ru", // to macros .env
@@ -25,8 +25,7 @@ class CustomEmailSender extends EmailValidator {
     return msg;
   }
 
-   buildEmailTemplate (emailTempateBody, css)
-  {
+  buildEmailTemplate(emailTempateBody, css) {
     const emailTemplate = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
     <html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
@@ -48,41 +47,20 @@ class CustomEmailSender extends EmailValidator {
     return emailTemplate;
   }
 
-  async Send (msg) {
+  async Send(msg) {
     /*
       buildAndSend 
       Params:
-      payload= {
-        to: 'glie@ya.ru',
-        from: 'honoyr@ya.ru',
+      msg= {
+        to: 'g***lie@gmail.com',
+        from: 'h***r@gmail.com',
         subject: 'Sending with Twilio SendGrid is Fun',
         text: 'and easy to do anywhere, even with Node.js',
         html: '<strong>and easy to do anywhere, even with Node.js</strong>',
       };
       return
-
     */
-
-    // return new Promise((resolve, reject) => {
-    //   this.emailSender.send(payload)
-    //     .then((res) => {
-    //       console.log(res);
-    //       resolve(res);
-    //     })
-    //     .catch((error) => {
-    //       reject(error);
-    //     })
-    // });
-    // const emailTemplate = this.emailSender.buildEmailTemplate(payload.emailTempateBody, payload.css);
-
-    // const msg = {
-    //   "to": payload.to,
-    //   "from": "glie@ya.ru", // to macros .env
-    //   "subject": payload.subject,
-    //   "text": "and easy to do anywhere, even with Node.js",
-    //   "html": emailTemplate,
-    // }
-    // console.log(`TEMPLATE = ${msg}`);
+    console.log(msg);
     try {
       const a = await this.emailSender.send(msg);
       return a
