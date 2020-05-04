@@ -1,0 +1,13 @@
+POST  http://localhost:3000/send-test-email
+Content-Type: application/json
+
+{
+  "to": "denis.gonor@gmail.com",
+  "from": "glie@ya.ru",
+  "subject": "Sending with Twilio SendGrid is Fun",
+  "text": "and easy to do anywhere, even with Node.js",
+  "html": "<strong>and easy to do anywhere, even with Node.js</strong>"
+}
+
+###
+
