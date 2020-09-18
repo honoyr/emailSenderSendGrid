@@ -120,7 +120,7 @@ Once the development server is started you should be able to reach the demo page
 
 ## Documentation
 
-Check the getting started guide here: [Documentation]
+Check the getting started guide here: [Documentation](https://grapesjs.com/docs/)
 
 
 
@@ -128,7 +128,7 @@ Check the getting started guide here: [Documentation]
 
 ## API
 
-API References could be found here: [API-Reference]
+API References could be found here: [API-Reference](https://grapesjs.com/docs/api/)
 
 
 
